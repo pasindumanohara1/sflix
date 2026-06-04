@@ -5,6 +5,7 @@ import Layout from '@/components/layout/Layout';
 import { tmdb, getImageUrl, getTitle, parseSlug } from '@/services/tmdb';
 import { SERVERS, getEmbedUrl } from '@/services/servers';
 import AdSlot from '@/components/common/AdSlot';
+import { MONETIZATION_LINK } from '@/services/links';
 import type { MediaDetails } from '@/types';
 
 export default function WatchPage() {
@@ -68,6 +69,12 @@ export default function WatchPage() {
         </div>
 
         <AdSlot position="between" />
+
+        <div className="watch-download">
+          <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="watch-download-btn">
+            <i className="fas fa-download" /> Download HD
+          </a>
+        </div>
 
         <div className="watch-servers container">
           <h3>Servers</h3>
@@ -190,6 +197,34 @@ export default function WatchPage() {
         }
 
         .watch-server-btn i { font-size: 0.75rem; }
+
+        .watch-download {
+          display: flex;
+          justify-content: center;
+          padding: 1rem 0;
+        }
+
+        .watch-download-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 12px 32px;
+          border-radius: 50px;
+          background: linear-gradient(135deg, #22c55e, #16a34a);
+          color: #fff;
+          font-size: 1rem;
+          font-weight: 700;
+          text-decoration: none;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        .watch-download-btn:hover {
+          color: #fff;
+          transform: scale(1.08);
+          box-shadow: 0 6px 24px rgba(34,197,94,0.5);
+          text-decoration: none;
+        }
 
         .watch-detail {
           padding: 1.5rem 0 3rem;

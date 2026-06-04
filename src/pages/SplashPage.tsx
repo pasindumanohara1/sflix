@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import AdInjector from '@/components/common/AdInjector';
+import { MONETIZATION_LINK } from '@/services/links';
 
 export default function SplashPage() {
   const [keyword, setKeyword] = useState('');
@@ -48,19 +49,19 @@ export default function SplashPage() {
         <div className="splash-social">
           <span className="splash-social-label">Share SFlix</span>
           <div className="splash-social-icons">
-            <a href="#" className="social-icon facebook" aria-label="Share on Facebook">
+            <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="social-icon facebook" aria-label="Facebook">
               <i className="fab fa-facebook-f" />
             </a>
-            <a href="#" className="social-icon twitter" aria-label="Share on Twitter">
+            <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="social-icon twitter" aria-label="Twitter">
               <i className="fab fa-twitter" />
             </a>
-            <a href="#" className="social-icon whatsapp" aria-label="Share on WhatsApp">
+            <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="social-icon whatsapp" aria-label="WhatsApp">
               <i className="fab fa-whatsapp" />
             </a>
-            <a href="#" className="social-icon reddit" aria-label="Share on Reddit">
+            <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="social-icon reddit" aria-label="Reddit">
               <i className="fab fa-reddit-alien" />
             </a>
-            <a href="#" className="social-icon telegram" aria-label="Share on Telegram">
+            <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="social-icon telegram" aria-label="Telegram">
               <i className="fab fa-telegram-plane" />
             </a>
           </div>

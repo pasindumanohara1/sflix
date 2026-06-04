@@ -10,6 +10,7 @@ import ShareWidget from '@/components/common/ShareWidget';
 import AdSlot from '@/components/common/AdSlot';
 import { tmdb, getImageUrl, getTitle, parseSlug } from '@/services/tmdb';
 import { SERVERS, getEmbedUrl } from '@/services/servers';
+import { MONETIZATION_LINK } from '@/services/links';
 import type { MediaDetails } from '@/types';
 
 export default function TVDetailPage() {
@@ -188,6 +189,9 @@ export default function TVDetailPage() {
             <div className="detail-tools">
               <RateWidget voteAverage={data.vote_average} voteCount={data.vote_count} />
               <ShareWidget />
+              <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="download-hd-btn">
+                <i className="fas fa-download" /> Download HD
+              </a>
             </div>
           </div>
         </div>
@@ -363,6 +367,29 @@ export default function TVDetailPage() {
           display: flex;
           gap: 0.75rem;
           align-items: flex-start;
+          flex-wrap: wrap;
+        }
+
+        .download-hd-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 8px 18px;
+          border-radius: 6px;
+          background: linear-gradient(135deg, #22c55e, #16a34a);
+          color: #fff;
+          font-size: 0.85rem;
+          font-weight: 600;
+          text-decoration: none;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        .download-hd-btn:hover {
+          color: #fff;
+          transform: scale(1.05);
+          box-shadow: 0 4px 16px rgba(34,197,94,0.4);
+          text-decoration: none;
         }
 
         .detail-similar { margin-top: 2rem; }

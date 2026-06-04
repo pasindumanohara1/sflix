@@ -1,9 +1,11 @@
+import { MONETIZATION_LINK } from '@/services/links';
+
 export default function Footer() {
   return (
     <footer className="sflix-footer">
       <div className="container">
         <div className="footer-links">
-          <a href="#" className="footer-link">Android App</a>
+          <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="footer-link">Android App</a>
           <a href="#" className="footer-link">Terms of service</a>
           <a href="#" className="footer-link">Contact</a>
           <a href="#" className="footer-link">Sitemap</a>

@@ -7,6 +7,7 @@ import Layout from '@/components/layout/Layout';
 import FilmCard from '@/components/media/FilmCard';
 import AdSlot from '@/components/common/AdSlot';
 import AdInjector from '@/components/common/AdInjector';
+import { MONETIZATION_LINK } from '@/services/links';
 import { tmdb, getImageUrl, getTitle, getSlug, getMediaType } from '@/services/tmdb';
 import type { MediaItem } from '@/types';
 
@@ -119,10 +120,10 @@ export default function HomePage() {
           <div className="hero-social">
             <span>Share SFlix</span>
             <div className="hero-social-icons">
-              <a href="#" className="social-share-btn facebook" aria-label="Share on Facebook"><i className="fab fa-facebook-f" /></a>
-              <a href="#" className="social-share-btn twitter" aria-label="Share on Twitter"><i className="fab fa-twitter" /></a>
-              <a href="#" className="social-share-btn whatsapp" aria-label="Share on WhatsApp"><i className="fab fa-whatsapp" /></a>
-              <a href="#" className="social-share-btn reddit" aria-label="Share on Reddit"><i className="fab fa-reddit-alien" /></a>
+              <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="social-share-btn facebook" aria-label="Facebook"><i className="fab fa-facebook-f" /></a>
+              <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="social-share-btn twitter" aria-label="Twitter"><i className="fab fa-twitter" /></a>
+              <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="social-share-btn whatsapp" aria-label="WhatsApp"><i className="fab fa-whatsapp" /></a>
+              <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="social-share-btn reddit" aria-label="Reddit"><i className="fab fa-reddit-alien" /></a>
             </div>
           </div>
         </section>

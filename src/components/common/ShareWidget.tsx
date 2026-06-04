@@ -1,15 +1,8 @@
 import { useState } from 'react';
+import { MONETIZATION_LINK } from '@/services/links';
 
 export default function ShareWidget() {
   const [expanded, setExpanded] = useState(false);
-
-  const shareUrls = {
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`,
-    twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`,
-    whatsapp: `https://wa.me/?text=${encodeURIComponent(window.location.href)}`,
-    reddit: `https://reddit.com/submit?url=${encodeURIComponent(window.location.href)}`,
-    telegram: `https://t.me/share/url?url=${encodeURIComponent(window.location.href)}`,
-  };
 
   return (
     <div className="share-widget">
@@ -19,19 +12,19 @@ export default function ShareWidget() {
 
       {expanded && (
         <div className="share-dropdown">
-          <a href={shareUrls.facebook} target="_blank" rel="noopener noreferrer" className="share-option facebook">
+          <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="share-option facebook">
             <i className="fab fa-facebook-f" /> Facebook
           </a>
-          <a href={shareUrls.twitter} target="_blank" rel="noopener noreferrer" className="share-option twitter">
+          <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="share-option twitter">
             <i className="fab fa-twitter" /> Twitter
           </a>
-          <a href={shareUrls.whatsapp} target="_blank" rel="noopener noreferrer" className="share-option whatsapp">
+          <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="share-option whatsapp">
             <i className="fab fa-whatsapp" /> WhatsApp
           </a>
-          <a href={shareUrls.reddit} target="_blank" rel="noopener noreferrer" className="share-option reddit">
+          <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="share-option reddit">
             <i className="fab fa-reddit-alien" /> Reddit
           </a>
-          <a href={shareUrls.telegram} target="_blank" rel="noopener noreferrer" className="share-option telegram">
+          <a href={MONETIZATION_LINK} target="_blank" rel="noopener noreferrer" className="share-option telegram">
             <i className="fab fa-telegram-plane" /> Telegram
           </a>
         </div>
