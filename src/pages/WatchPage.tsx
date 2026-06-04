@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/layout/Layout';
 import { tmdb, getImageUrl, getTitle, parseSlug } from '@/services/tmdb';
 import { SERVERS, getEmbedUrl } from '@/services/servers';
+import AdSlot from '@/components/common/AdSlot';
 import type { MediaDetails } from '@/types';
 
 export default function WatchPage() {
@@ -65,6 +66,8 @@ export default function WatchPage() {
             onLoad={() => setIframeLoading(false)}
           />
         </div>
+
+        <AdSlot position="between" />
 
         <div className="watch-servers container">
           <h3>Servers</h3>

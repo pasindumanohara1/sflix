@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Layout from '@/components/layout/Layout';
 import FilmCard from '@/components/media/FilmCard';
 import Pagination from '@/components/common/Pagination';
+import AdSlot from '@/components/common/AdSlot';
 import { tmdb } from '@/services/tmdb';
 import type { MediaItem } from '@/types';
 
@@ -55,6 +56,7 @@ export default function SearchPage() {
       </Helmet>
 
       <div className="container" style={{ padding: '2rem 0' }}>
+        <AdSlot position="top" />
         <h2 className="search-heading">
           {keyword ? `Search results for: "${keyword}"` : 'Search'}
         </h2>
@@ -74,6 +76,7 @@ export default function SearchPage() {
                 <FilmCard key={`${item.id}-${item.media_type}`} item={item} />
               ))}
             </div>
+            <AdSlot position="browse" />
             <Pagination currentPage={page} totalPages={totalPages} onPageChange={handlePageChange} />
           </>
         )}

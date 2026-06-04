@@ -7,6 +7,7 @@ import SeasonSelector from '@/components/media/SeasonSelector';
 import TrailerModal from '@/components/common/TrailerModal';
 import RateWidget from '@/components/common/RateWidget';
 import ShareWidget from '@/components/common/ShareWidget';
+import AdSlot from '@/components/common/AdSlot';
 import { tmdb, getImageUrl, getTitle, parseSlug } from '@/services/tmdb';
 import { SERVERS, getEmbedUrl } from '@/services/servers';
 import type { MediaDetails } from '@/types';
@@ -191,7 +192,9 @@ export default function TVDetailPage() {
           </div>
         </div>
 
-        {similar.length > 0 && (
+        <AdSlot position="detail" />
+
+      {similar.length > 0 && (
           <div className="detail-similar">
             <h3>You may also like</h3>
             <div className="similar-grid stagger-grid">

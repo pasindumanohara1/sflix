@@ -1,0 +1,48 @@
+social bar - <script src="https://pl29636235.effectivecpmnetwork.com/94/5f/29/945f2983b6d759ba0968365b0a78f0e7.js"></script>
+native banner - <script async="async" data-cfasync="false" src="https://pl29636236.effectivecpmnetwork.com/ebbe82070b639a1b79fe76c88895db60/invoke.js"></script>
+<div id="container-ebbe82070b639a1b79fe76c88895db60"></div>
+
+<script>
+  atOptions = {
+    'key' : '1b08b5473ba6c9c59748851619f364bc',
+    'format' : 'iframe',
+    'height' : 600,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/1b08b5473ba6c9c59748851619f364bc/invoke.js"></script>
+
+<script>
+  atOptions = {
+    'key' : '0e9cea3c1172c7c9da0e0937e8d5b85a',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/0e9cea3c1172c7c9da0e0937e8d5b85a/invoke.js"></script>
+
+<script>
+  atOptions = {
+    'key' : '55fdfd2d23e124fb20cf43f6839f2502',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/55fdfd2d23e124fb20cf43f6839f2502/invoke.js"></script>
+
+
+<script>
+  atOptions = {
+    'key' : '91ee9d1b8eb9b04d9e0f14b0840524ea',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/91ee9d1b8eb9b04d9e0f14b0840524ea/invoke.js"></script>

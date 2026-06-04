@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import FilmCard from '@/components/media/FilmCard';
 import AdSlot from '@/components/common/AdSlot';
+import AdInjector from '@/components/common/AdInjector';
 import { tmdb, getImageUrl, getTitle, getSlug, getMediaType } from '@/services/tmdb';
 import type { MediaItem } from '@/types';
 
@@ -50,6 +51,7 @@ export default function HomePage() {
 
   return (
     <Layout>
+      <AdInjector socialBar />
       <Helmet>
         <title>SFlix | Watch HD Movies Online Free</title>
         <meta name="description" content="Watch HD movies online free at SFlix. Stream the latest movies, TV shows, and trending content." />

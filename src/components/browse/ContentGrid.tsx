@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import FilmCard from '@/components/media/FilmCard';
 import Pagination from '@/components/common/Pagination';
 import FilterModal, { type FilterState } from '@/components/common/FilterModal';
+import AdSlot from '@/components/common/AdSlot';
 import type { MediaItem, PaginatedResponse } from '@/types';
 
 interface ContentGridProps {
@@ -61,6 +62,8 @@ export default function ContentGrid({ title, fetchFn, showFilter = false }: Cont
           </button>
         )}
       </div>
+
+      <AdSlot position="browse" />
 
       {loading ? (
         <div className="grid-loader">

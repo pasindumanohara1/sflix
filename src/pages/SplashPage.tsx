@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import AdInjector from '@/components/common/AdInjector';
 
 export default function SplashPage() {
   const [keyword, setKeyword] = useState('');
@@ -15,6 +16,7 @@ export default function SplashPage() {
 
   return (
     <div className="splash-page">
+      <AdInjector socialBar />
       <Helmet>
         <title>SFlix | Watch HD Movies Online Free | TV Series & Stream Live</title>
         <meta name="description" content="SFlix - Watch HD movies online free. Stream TV series, movies, and trending content in HD quality. Download or watch online at SFlix." />
